@@ -1,5 +1,5 @@
+
 document.addEventListener("DOMContentLoaded", function() {
-    // Slider functionality
     const slides = document.querySelectorAll(".slide");
     const leftArrow = document.getElementById("arrow-left");
     const rightArrow = document.getElementById("arrow-right");
@@ -30,8 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
             rightArrow.click();
         }, 5000); // Change slide every 5 seconds
     }
+});
 
-    // Tab functionality
+document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
     const nestedTabButtons = document.querySelectorAll('.nested-tab-button');
@@ -66,28 +67,35 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById(nestedTabId).classList.add('active');
         });
     });
+});
 
-    // Show/Hide sections
-    function showRegistrationForm() {
-        const participantsSection = document.querySelector('.participants-section');
-        const registrationSection = document.querySelector('.registration-section');
-        if (participantsSection && registrationSection) {
-            participantsSection.style.display = 'none';
-            registrationSection.style.display = 'block';
-        }
+function showRegistrationForm() {
+    // Hide participants section
+    const participantsSection = document.querySelector('.participants-section');
+    const registrationSection = document.querySelector('.registration-section');
+    if (participantsSection && registrationSection) {
+        participantsSection.style.display = 'none';
+        // Show registration section
+        registrationSection.style.display = 'block';
     }
+}
 
-    function showParticipantsSection() {
-        const participantsSection = document.querySelector('.participants-section');
-        const registrationSection = document.querySelector('.registration-section');
-        if (participantsSection && registrationSection) {
-            registrationSection.style.display = 'none';
-            participantsSection.style.display = 'block';
-        }
+function showParticipantsSection() {
+    // Hide registration section
+    const participantsSection = document.querySelector('.participants-section');
+    const registrationSection = document.querySelector('.registration-section');
+    if (participantsSection && registrationSection) {
+        registrationSection.style.display = 'none';
+        // Show participants section
+        participantsSection.style.display = 'block';
     }
+}
 
+document.addEventListener('DOMContentLoaded', () => {
     const registerButton = document.querySelector('.register-btn');
     const backButton = document.querySelector('#backButton');
+    const participantsSection = document.querySelector('.participants-section');
+    const registrationSection = document.querySelector('.registration-section');
 
     if (registerButton) {
         registerButton.addEventListener('click', function(event) {
