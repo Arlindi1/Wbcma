@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function showRegistrationForm() {
     // Hide participants section
+    alert(0);
     const participantsSection = document.querySelector('.participants-section');
     const registrationSection = document.querySelector('.registration-section');
     if (participantsSection && registrationSection) {
@@ -79,6 +80,7 @@ function showRegistrationForm() {
         registrationSection.style.display = 'block';
     }
 }
+
 
 function showParticipantsSection() {
     // Hide registration section
