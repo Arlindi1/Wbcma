@@ -91,13 +91,19 @@ session_start();
         <section class="participants-section">
             <div class="participants-title-container mb-6 flex justify-between align-center">
                 <h2 class="main-title">Participants</h2>
-                <a href="/participants.php" class="register-btn">
+                <button class="register-btn">
                     Register
                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 4h6m0 0L3 1m3 3L3 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
             </div>
+
+              <!-- Registration Form - initially hidden -->
+        <section class="registration-section">
+            <?php include 'registration_form.php'; ?>
+        </section>
+        
             <div class="table-container">
                 <table class="full-width">
                     <thead>
@@ -352,11 +358,6 @@ session_start();
                     </tbody>
                 </table>
             </div>
-        </section>
-
-        <!-- Registration Form - initially hidden -->
-        <section class="registration-section">
-            <?php include 'registration_form.php'; ?>
         </section>
 
     </div>
