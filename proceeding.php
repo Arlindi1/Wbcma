@@ -36,53 +36,7 @@ session_start();
                         <li><a href="authentication/admin_dashboard.php"><i class="fas fa-user-shield"></i> Admin Dashboard</a></li>
                     <?php endif; ?>
                     <li><a href="authentication/profile.php">Profile</a></li>
-                    <li><a href="authentication/published_abstracts.php"><i class="fas fa-file-alt"></i> Published Abstracts</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    
+                    <li><a href="authentication/published_abstracts.php"><i class="fas fa-file-alt"></i> Published Abstracts</a></li> 
                     <li><a href="authentication/logout.php">Logout</a></li>
                 <?php else: ?>
                     <li><a href="authentication/login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
