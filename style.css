@@ -1,0 +1,977 @@
+body, html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Lighter background for the conference site */
+  color: #333; /* Dark grey text for better readability */
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the content wrapper takes up at least 100% of the viewport height */
+}
+
+
+/* Header Styles */
+header {
+  background-color: #fff; /* White background for a clean look */
+  padding: 20px;
+  box-shadow: 0 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  flex: 1;
+  z-index: 1000; /* Ensures header is always on top */
+  height: 100px; /* Set a fixed height for the header */
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Center the navigation */
+  align-items: center;
+  height: 100%; /* Make nav take the full height of the header */
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+}
+
+.logo img {
+  height: 60px; /* Slightly smaller logo for a conference */
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 100%; /* Make ul take the full height of the nav */
+}
+
+.nav-links li {
+  margin: 0 15px; /* Spacing between menu items */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  height: 100%; /* Make a take the full height of the li */
+}
+
+.nav-links a i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.nav-links a:hover {
+  color: #0056b3; /* Conference theme color */
+}
+
+.container {
+  margin-top: 140px;
+  flex: 1;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+/* Main Container Styles */
+.main-container {
+  display: flex;
+  justify-content: space-between; /* Ensure elements are side by side */
+  align-items: flex-start; /* Align items at the start */
+  margin-top: 50px; /* Adjust for header */
+  padding: 20px;
+  gap: 20px; /* Add space between the main content and sidebar */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 350px; /* Fixed width for the sidebar */
+  padding: 20px;
+  position: absolute; /* Make sidebar absolute */
+  top: 720px; /* Adjust to lower the sidebar below the slider */
+  right: 20px; /* Adjust as per your layout */
+}
+
+.sidebar-item {
+  background-color: #b2d3e8; /* Dark background for visibility */
+  color: #fff;
+  padding: 30px;
+  justify-content:space-between; /* Center items horizontally */
+  line-height: 1.8;
+  margin-bottom: 30px; /* Space between sidebar items */
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Sidebar Styles */
+.sidebar-item a {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Center items vertically */
+  justify-content:space-between; /* Center items horizontally */
+  color: #fdfdfd; /* Ensure text color is visible */
+  text-decoration: none; /* Remove underline from the link */
+  font-size: 14px;
+  color: #0a0a0a;
+}
+
+.sidebar-item a i {
+  margin-left: 60px; /* Space between text and icon */
+  font-size: 1.8rem; /* Adjust icon size */
+  font-weight: bold;
+  color: #0a0a0a;
+
+}
+
+
+.sidebar-item h3{
+  font-size: 18px;
+  font-weight: bold;
+  color: #0a0a0a;
+
+}
+
+.sidebar-item p{
+  font-size: 14px;
+  font-weight: bold;
+  color: #0a0a0a;
+
+}
+
+.sidebar-item span{
+  font-size: 14px;
+  font-weight: bold;
+  color: #0a0a0a;
+
+}
+
+.sponsor {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sponsor img {
+  width: 35px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.sponsor span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #0a0a0a;
+
+}
+
+/* Content Section */
+.main-content {
+  flex: 1;
+  padding: 40px 20px;
+  margin-right: 320px; /* Space for fixed sidebar */
+}
+
+.text-section {
+  max-width: 800px;
+  margin: 0 auto; /* Centering */
+  padding: 40px 20px; /* Increase padding */
+  font-size: 1.5rem; /* Increase the text size */
+  flex: 3;
+}
+
+.text {
+  margin-bottom: 60px; /* Increase space between sections */
+}
+
+.text h1 {
+  font-size: 3rem; /* Increase the heading size */
+  margin-bottom: 30px; /* Increase space between heading and paragraph */
+  font-weight:bolder;
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+
+}
+
+.text p {
+  font-size: 1.5rem; /* Increase the paragraph size */
+  line-height: 1.6; /* Increase line height for readability */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.text a.button {
+  display: inline-block;
+  margin-top: 20px; /* Space above button */
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.text a.button:hover {
+  background-color: #003f7f;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-column {
+  padding: 10px;
+}
+
+.footer-logo{
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.social-media-icons a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #fefefe;
+  border-radius: 50%;
+  margin-right: 5px;
+  color: #222;
+  text-align: center;
+  line-height: 30px;
+}
+
+.social-media-icons a:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+
+/* Tab navigation styles */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #e0e0e0;
+  height: 50px;
+  width: 1200px;
+  margin-top: 90px;
+}
+
+.tab-button {
+  flex: 1;
+  background-color: #f4f4f4;
+  border:none;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 2.0rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.tab-button.active {
+  background-color: #0056b3;
+  color: white;
+}
+
+.tab-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Tab content styles */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+#speakers.tab-content.active{
+  margin: 60px;
+}
+
+.speakers-section {
+  max-width: 1200px;
+  max-height: 2000px;
+  margin: 0 auto; /* Centering */
+  padding: 40px 20px; /* Increase padding */
+  font-size: 1.5rem; /* Increase the text size */}
+
+/* Speaker styles */
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  margin: 20px 0;
+}
+
+.speaker {
+  flex: 0 0 32%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.speaker img {
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.speaker h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.speaker p {
+  margin: 0;
+  font-size: 1.5rem;
+  max-width: 70%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .speaker {
+      width: 45%; /* Adjust width for two speakers per row on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .speaker {
+      width: 100%; /* Adjust width for one speaker per row on mobile devices */
+  }
+}
+
+/* Styling for Important Dates section */
+
+
+.important-dates {
+  width: 1200px;
+  height: 400px;
+  margin-top: 70px;
+}
+
+.date-item {
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  font-size: 2rem;
+}
+
+.date-title {
+  font-weight: bold;
+  flex: 1;
+}
+
+.date-info {
+  flex: 1;
+  text-align: left;
+}
+
+/* Styling for Committees section */
+.committees {
+  margin-top: 20px;
+  width: 1200px;
+
+}
+
+/* Styling for nested tabs */
+.nested-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nested-tab-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.nested-tab-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.nested-tab-content {
+  display: none;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.nested-tab-content.active {
+  display: block;
+}
+
+.nested-tab-content ul {
+  list-style-type:disc;
+  padding-left: 20;
+}
+
+.nested-tab-content ul li {
+  padding: 5px 0;
+  margin-bottom: 15px;
+}
+
+.document-link {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+}
+.document-link:hover {
+  color: #0056b3;
+}
+
+.proceeding-links li {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.proceeding-links a {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #19a3b5;
+  text-decoration: none;
+}
+.proceeding-links a:hover {
+  text-decoration: none;
+}
+
+.proceeding-link {
+  font-size: 2rem; /* Increase the font size */
+  font-weight: bold; /* Make the text bold */
+  color: hsl(0, 0%, 0%); /* Set the text color to black */
+  text-decoration: none; /* Remove the underline */
+  display: block; /* Ensure it takes up the full width */
+  margin-bottom: 10px; /* Add some space between the links */
+  transition: color 0.3s ease; /* Add a transition for color change */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+  width:fit-content;
+
+}
+
+.proceeding-link:hover {
+  color: #0056b3; /* Change color on hover */
+}
+
+.venue-page.main-spacing {
+  margin-top: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.venue-page-text-container-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  font-family: Catamaran,sans-serif;
+}
+
+.venue-page-text {
+  flex: 1;
+  margin-right: 20px;
+  max-width: 500px;
+}
+
+.venue-page-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.venue-page-text .text-content h3 {
+  font-size: 1.8rem;
+}
+
+
+
+.text-content-1 p{
+  font-size: 14px;
+  margin-bottom: 45px;
+  line-height: 1.5;
+}
+
+.text-content-2 p{
+  font-size: 14px;
+  margin-bottom: 60px;
+  line-height: 1.5;
+  justify-content: center;
+}
+
+/* Gallery Section */
+.venue-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust size as needed */
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.venue-gallery img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover; /* This will make sure the image covers the entire box without stretching */
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.venue-gallery img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+.venue-gallery-section h2{
+  font-family: Catamaran,sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Participants Section */
+.participants-section {
+    padding: 40px 20px;
+    width: 90%;
+    margin: 0 auto;
+    font-family: Lato, sans-serif;;
+}
+
+.participants-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.participants-title-container .main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.register-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0056b3; /* Adjust the color to your preference */
+  text-decoration: none;
+  border: 2px solid #0056b3; /* Adjust the color to your preference */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.register-btn svg {
+  fill: #00b7c3; /* Adjust the color to your preference */
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #0056b3; /* Adjust the color to your preference */
+  color: white;
+}
+
+.register-btn:hover svg {
+  fill: white;
+  transform: translateX(5px); /* Adjust the distance if needed */
+}
+
+
+/* Ensure table takes full width */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table.full-width {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.full-width th, table.full-width td {
+  padding: 8px 16px;
+  text-align: left;
+  vertical-align: middle;
+  word-wrap: break-word; /* Allow text to wrap */
+  white-space: normal; /* Allow text to break into new lines */
+}
+
+/* Specific rule for the Abstract Title column to ensure it takes necessary space */
+table.full-width td:nth-child(5) {
+  max-width: 400px; /* Adjust this value as needed */
+}
+
+table.full-width tbody{
+  font-size: 1.5rem;
+  font-weight: lighter;
+  align-items: center;
+  line-height: 1.5;
+}
+
+table.full-width thead{
+  font-size: 1.6rem;
+  border-bottom: 2px solid #0056b3;
+}
+
+/* Adjust the width of the Name and University columns */
+.table-container th:nth-child(2),
+.table-container td:nth-child(2) {
+    width: 10%;
+}
+
+.table-container th:nth-child(3),
+.table-container td:nth-child(3) {
+    width: 10%;
+}
+
+/* Ensure the other columns adjust accordingly */
+.table-container th:nth-child(4),
+.table-container td:nth-child(4) {
+    width: 5%;
+}
+
+.table-container th:nth-child(5),
+.table-container td:nth-child(5) {
+    width: 65%;
+}
+
+.table-container th:nth-child(6),
+.table-container td:nth-child(6) {
+    width: 5%;
+}
+
+.registration-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.registration-section h2 {
+  margin-top: 0;
+}
+
+.registration-section form {
+  display: flex;
+  flex-direction: row;
+}
+
+.registration-section label {
+  margin-top: 10px;
+}
+
+.registration-section input[type="text"],
+.registration-section input[type="email"],
+.registration-section input[type="submit"] {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+#backButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#backButton:hover {
+  background-color: #003f7f;
+}
+
+/* Registration form styles */
+
+.registration-section {
+  display: none;
+}
+
+/* Registration form styles */
+.registration-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.half-width {
+  flex: 1;
+  max-width: 40%;
+  box-sizing: border-box;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-control input[type="file"] {
+  padding: 0;
+}
+
+.form-control textarea {
+  resize: vertical;
+}
+
+.primary-btn {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #003f7f;
+}
+
+/* Flex alignments */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* Spacing */
+.main-spacing {
+  padding: 40px 20px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Adjust font size and weight for better readability */
+.text p, .text ul {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.text ul {
+  margin: 10px 0 20px 20px;
+}
+
+.text ul li {
+  margin-bottom: 10px;
+}
+
+/* contact.css */
+
+/* Contact Section */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.contact-container h2{
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: bold;
+  font-size: 3.5rem;
+  align-self: start;
+  margin-bottom: 60px;
+}
+
+
+.contact-section {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0; /* Add padding around the section */
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-form-container form {
+  width: 45%;
+}
+
+.contact-form-container form .form-control {
+  margin-bottom: 15px;
+}
+
+.contact-form-container form .form-control label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333; /* Darker label color for better contrast */
+}
+
+.contact-form-container form .form-control input,
+.contact-form-container form .form-control textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+.contact-form-container form .form-control input:focus,
+.contact-form-container form .form-control textarea:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none;
+}
+
+.contact-form-container form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff; /* Blue background for the button */
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.contact-form-container form button:hover {
+  background: #0056b3; /* Darker blue on hover */
+}
+
+.contact-form-container .contact-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-container .contact-image img {
+  width: 100%;
+  height: auto;
+}
+
+.confirmation-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.confirmation-message {
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-message h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.confirmation-message p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.confirmation-message .btn {
+  background-color: #007BFF;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.confirmation-message .btn:hover {
+  background-color: #0056b3;
+}
