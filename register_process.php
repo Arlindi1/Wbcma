@@ -2,11 +2,15 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
-session_start();
+$url = parse_url("mysql://uo6kzkjyvsbyo5pv:sburww1ly6qy8kz2@thh2lzgakldp794r.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/jrpg28n7zvcevq5t");
 
-$conn = new mysqli("localhost", "root", "12345678", "registration_db");
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = ltrim($url["path"], '/');
+$port = $url["port"];
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
